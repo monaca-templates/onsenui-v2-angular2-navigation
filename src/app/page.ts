@@ -1,14 +1,13 @@
-import {Component, Inject, forwardRef} from '@angular/core';
-import {ONS_DIRECTIVES, OnsNavigator} from 'angular2-onsenui';
+import {Component} from '@angular/core';
+import {OnsNavigator} from 'angular2-onsenui';
 
 @Component({
   selector: 'ons-page',
-  directives: [ONS_DIRECTIVES],
   template: require('./page.html'),
   styles: [require('./page.css')]
 })
 export class Page {
-  constructor(@Inject(forwardRef(() => OnsNavigator)) private navi : OnsNavigator) {
+  constructor(private navi : OnsNavigator) {
   }
 
   push() {
