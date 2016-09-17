@@ -11,6 +11,7 @@ import {RouterModule} from '@angular/router';
 import {OnsenModule} from 'angular2-onsenui';
 
 import {MyApp} from './app/app';
+import {Page} from './app/page';
 
 // Enable production mode when in production mode.
 if (process.env.NODE_ENV === 'production') {
@@ -25,6 +26,10 @@ if (process.env.NODE_ENV === 'production') {
     ],
     declarations: [
         MyApp,
+        Page,
+    ],
+    entryComponents: [
+        Page,
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
