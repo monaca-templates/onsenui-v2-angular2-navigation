@@ -4,10 +4,8 @@ require('onsenui/css/onsenui.css');
 
 // Application code starts here
 import {enableProdMode, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {HttpModule} from '@angular/http';
-import {RouterModule} from '@angular/router';
 import {OnsenModule} from 'angular2-onsenui';
 
 import {MyApp} from './app/app';
@@ -22,7 +20,6 @@ if (process.env.NODE_ENV === 'production') {
     imports: [
         OnsenModule,
         HttpModule,
-        RouterModule,
     ],
     declarations: [
         MyApp,
@@ -30,9 +27,6 @@ if (process.env.NODE_ENV === 'production') {
     ],
     entryComponents: [
         Page,
-    ],
-    providers: [
-        {provide: LocationStrategy, useClass: HashLocationStrategy},
     ],
     bootstrap: [
         MyApp,
