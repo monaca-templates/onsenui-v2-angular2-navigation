@@ -2,6 +2,8 @@
 require('onsenui/css/onsen-css-components.css');
 require('onsenui/css/onsenui.css');
 
+import * as ons from 'onsenui';
+
 // Application code starts here
 import {enableProdMode, NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
@@ -14,6 +16,11 @@ import {Page} from './app/page';
 // Enable production mode when in production mode.
 if (process.env.NODE_ENV === 'production') {
   enableProdMode();
+}
+
+if (ons.platform.isIPhoneX()) {
+  document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+  document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
 }
 
 @NgModule({
