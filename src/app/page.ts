@@ -5,7 +5,7 @@ import {OnsNavigator} from 'ngx-onsenui';
   selector: 'ons-page[page]',
   template: require('./page.html'),
   styles: [
-    require('./page.css')
+    './page.css'
   ]
 })
 export class Page {
